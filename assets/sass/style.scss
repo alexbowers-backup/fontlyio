@@ -1,0 +1,102 @@
+@import 'colours';
+@import 'fonts';
+@import 'general';
+
+html {
+  width: 100%;
+  height: 100%;
+  body {
+    width: 100%;
+    height: 100%;
+    font-family: Tahoma, Geneva, sans-serif; /* Fallback fonts */
+    color: white;
+    header {
+      height: 100%;
+      width: 100%;
+      color: $black;
+      margin: 0 auto;
+      text-align: center;
+      div.github-link {
+        text-align: right;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        a {
+          text-decoration: none;
+          color: $black;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 16px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      div.hero {
+        position: relative;
+        top: 50%;
+        display: inline-block;
+        transform: translateY(-50%);
+        width: auto;
+        h1 {
+          font-family: "Libre Baskerville", $default;
+          font-size: 72px;
+          font-weight: 400;
+          font-style: normal;
+          margin: 0;
+        }
+        h3 {
+          display: none; // Unsure if i want my name on the homepage yet.
+          margin: 0;
+          font-family: 'Source Code Pro', $default;
+          text-align: right;
+          position: relative;
+          right: 2px;
+          a {
+            color: black;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .pages {
+      height: 100%;
+      width: 100%;
+      color: $black;
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+      .page {
+        display: block;
+        width: 100%;
+        height: 100%;
+        .content {
+          position: relative;
+          top: 50%;
+          display: inline-block;
+          transform: translateY(-50%);
+          width: auto;
+          blockquote {
+            font-size: 38px;
+            margin: 0 auto;
+            width: 75%;
+            line-height: 1.46;
+            min-width: 400px;
+          }
+          hr {
+            border-color: inherit;
+            width: 60px;
+          }
+          .author {
+            font-size: 18px;
+            padding-top: 2px;
+          }
+        }
+      }
+      @import 'pages';
+    }
+  }
+}
